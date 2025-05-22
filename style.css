@@ -1,0 +1,42 @@
+*{
+    margin: 0; /*Marge extérieur de la boîte*/
+    padding: 0; /*Marge intérieur de la boîte*/
+    box-sizing :border-box /*Indique que l'on va inclure les marges internes et bordure dans la taille du parent (boîte direct de celui-ci)*/
+}
+.logo{
+    width: 350
+    px; /*Pour redimensionner l'image*/
+}
+ul li{ /*C'est la boîte parent mon menu (accueil, voyage, contacts)*/
+   list-style: none; /*Pour retirer les points du texte de mon menu (accueil, voyage, contacts)*/
+   margin: 10%; /*Pour créer des espaces dans mon menu entre les textes (accueil, voyage, contacts)*/
+}
+a{
+    text-decoration: none; /*Pour retirer le soulignement bleu du texte*/
+}
+.header{ /*C'est la boîte principale boîte parent*/
+   display: flex; 
+}
+.menuLink{ /*C'est la boîte parent par défaut de mon menuLink : c'est pour agir seulement sur le menuLink qui est dans mon menu ul li*/
+    display: flex;
+}
+.MesImages{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    justify-content: space-between;
+}
+.zèbres{
+    width: 188px;
+}
+.com{
+    text-align: center;
+}
+table,th,td{
+    border:1px solid black; /*C'est pour mettre des bordures*/
+    border-collapse: collapse; /*C'est pour retirer la double bordure*/
+}
+fieldset{
+    background-color: rgb(176, 201, 109);
+}
+
