@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours JS du 16 Juin 2025</title>
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+
+    <!-- <section>
+    <script> /*javaScript*/
+    alert('Bonjour'); /*Pour afficher un texte*/
+    let monMessage = 'Hello !'; /*Création valeur de ma variable monMessage*/
+    let sonPrenom = prompt('Quel est ton prénom ?'); /*Quand une réponse est attendue*/
+    alert('Bonjour ' + sonPrenom +' ! :-)');
+</script>
+</section>
+<section> 
+    <script> /*Test Js*/
+        alert(monMessage); /*Pour l'usage d'une variable pas d'apostrophes'*/
+        alert(monMessage + sonPrenom +' ! :-)');
+    </script>
+</section> -->
+<!-- <section>
+    <script> /*Exercice 4.1 JavaScript*/
+    let laReponse = prompt('Merci de saisir bonjour ou tu vas bien ?');
+    if(laReponse == 'bonjour'){
+        alert('Bonjour à toi !')
+    } else if(laReponse == 'tu vas bien ?'){
+        alert('Bien, et toi ?')
+    } else {
+        alert("Désolée je n'ai pas compris")
+    }
+    </script>
+</section> -->
+<!-- <section>
+    <script> /*Exercice 4.2 JavaScript*/
+    let laReponse = prompt('Bonjour ! (Merci de répondre Bonjour)') /*création de ma variable 1*/
+    if(laReponse.toLowerCase() == 'bonjour'){
+
+        alert("J'ai une question pour toi");
+    
+       let laReponse2 = prompt('As-tu bien dormi ? (oui ou non)') /*création de ma varaibale 2 dans la variable 1*/
+       if(laReponse2.toLowerCase() == 'oui'){ /*condition 1*/
+        alert('Cool !')
+       } else{ /*condition 2*/
+        alert('Dommage tu riques de passer une mauvaise journée !')
+       }
+
+    }
+    </script>
+</section> -->
+
+<!-- <section>
+    <script> /*Exercice 4.3 JavaScript*/
+    alert("Hello j'ai besoin d'information pour le repas de ce soir !")
+    let menu = prompt('As-tu faim ? Meci de répondre par oui ou non')
+    if(menu == 'oui'){
+        let choix = prompt ('Veux-tu un plat végétarien ou non végétarien ? Merci de répondre par végétarien ou non végétarien');
+    }else{
+        let boisson = prompt('As-tu soif ?');
+    }
+        if ('végétarien'==true){       
+            alert("Votre plat sera une poêlée de légume accompagnée d'un filet de poisson pané");
+        } else {
+            alert("Votre plat sera des lasagnes accompagnées d'une salade");
+        }
+
+   
+    </script>
+</section> -->
+
+<!-- <section>
+    <script> /*Exercice 4.3 JavaScript*/
+    let salutation = prompt ("Hello ! (répondre salut)")
+    if(salutation.toLowerCase() == 'salut'){
+        let specialite = prompt('Merci de choisir une spécialité : italienne, marocaine ou française ');
+        if(specialite.toLowerCase() == 'italienne'){
+            let speItalienne = prompt("une pizza margherita avec sans champignon ? (répondre avec ou sans)")
+            if(speItalienne.toLowerCase() == 'avec'){
+                alert('Votre pizza margherita avec champignon sera prête dans 20 minutes')
+                alert("Jérémie n'est pas content mais c'est pas grave !")
+            }else{
+                alert('Votre pizza margherita sans champignon sera prête dans 20 minutes')
+                alert("Jérémie n'est pas content mais c'est pas grave !")
+            }
+            let boisson = prompt("Voulez-vous de l'eau ou un soda ? (répondre eau ou soda)")
+            if(boisson.toLowerCase() == 'eau'){
+                let eau = prompt("Voulez-vous de l'eau plate ou gazeuse ? (merci de répondre plate ou gazeuse)" )
+                if(eau.toLowerCase() == 'plate'){
+                     alert('Parfait je vous apporte votre eau plate')
+                }else{
+                    alert('Parfait je vous apporte votre eau gazeuse')
+                } 
+            }else{
+                let soda = prompt("Voulez-vous un jus d'orange maison ou une limonade italienne ? (merci de répondre orange ou limonade)")
+                if(soda.toLowerCase() =='orange'){
+                    alert("Parfait je vous apporte un jus d'orange maison")
+                }else{
+                    alert("Parfait je vous apporte une limonade italienne")
+                } 
+            }
+        }
+        else if(specialite.toLowerCase() == 'marocaine'){
+            let speMarocaine = prompt ("un tajine au poulet ou couscous royal ? (répondre tajine ou cousous)");
+            if(speMarocaine.toLowerCase() == 'tajine'){
+                alert('Votre plat sera un tajine de poulet aux olives prêt dans 3h spécialement pour Jérémie hihi !')
+            }else{
+                alert('Votre plat sera un couscous royal prêt dans 4h spécialement pour Jérémie hihi !');
+            }
+            let boisson = prompt("Voulez-vous de l'eau ou un soda ? (répondre eau ou soda)")
+            if(boisson.toLowerCase() == 'eau'){
+                let eau = prompt("Voulez-vous de l'eau plate ou gazeuse ? (merci de répondre plate ou gazeuse)");
+                if(eau.toLowerCase() == 'plate'){
+                     alert('Parfait je vous apporte votre eau plate');
+                     alert('Nous vous offons un verre de thé à la menthe');
+                }else{
+                    alert('Parfait je vous apporte votre eau plate');
+                    alert('Nous vous offrons un verre de thé à la menthe');
+                } 
+            }else{
+                let soda = prompt("Voulez-vous un orangina ou un ice tea ? (merci de répondre orangina ou tea)");
+                if(soda.toLowerCase() =='orangina'){
+                    alert("Parfait je vous apporte un orangina");
+                    alert('Nous vous offrons un verre de thé à la menthe');
+                }else{
+                    alert("Parfait je vous apporte un ice tea");
+                    alert('Nous vous offrons un verre de thé à la menthe');
+                } 
+            }
+        }
+        else if(specialite.toLowerCase() == 'française'){
+            let speFrancaise = prompt('un boeuf bourguigon ou une quiche au thon ? (répondre boeuf ou quiche)');
+            if(speFrancaise.toLowerCase() == 'boeuf'){
+                alert('Le boeuf bourguignon sera servi dans 30 minutes');
+            }else{
+                alert('La quiche au thon sera servi dans 20 mnutes');
+            }
+            let boisson = prompt("Voulez-vous de l'eau ou un soda ? (répondre eau ou soda)")
+            if(boisson.toLowerCase() == 'eau'){
+                let eau = prompt("Voulez-vous de l'eau plate ou gazeuse ? (merci de répondre plate ou gazeuse)");
+                if(eau.toLowerCase() == 'plate'){
+                     alert('Parfait je vous apporte votre eau plate');
+                }else{
+                    alert('Parfait je vous apporte votre eau gazeuse');
+                } 
+            }else{
+                let soda = prompt("Voulez-vous un orangina ou un ice tea ? (merci de répondre orangina ou tea)");
+                if(soda.toLowerCase() =='orangina'){
+                    alert("Parfait je vous apporte un orangina");
+                }else{
+                    alert("Parfait je vous apporte un ice tea");
+                } 
+            }
+        }
+}
+    -->
+    <!-- </script>
+</section> -->
+<!-- <section>
+    <script> /*Exemple d'une boucle for*/
+    for ( let monNombre = 1; monNombre <= 100;monNombre++ ) {
+        console.log( monNombre );
+    }
+    </script>
+</section> -->
+
+<!-- <section>
+    <script> /*Exo 3 FizzBuz*/
+    /*Avec les variables*/
+
+//     for ( let i = 1; i <=199; i++ ){
+//      if ( i%3 === 0 && i%5 === 0 ){
+//         console.log ("FizzBuzz");
+//      }else if ( i%3 === 0){
+//         console.log ("Fizz")
+//      }else if ( i%5 === 0){
+//         console.log ("Buzz")
+//      }else{
+//         console.log(i)
+//      }
+// }
+
+
+/*Avec les ternaires*/
+
+// for (let i = 1; i <=199; i++){
+//     let result = '';
+//     if ( i % 3 === 0) result += 'Fizz';
+//     if ( i % 5 === 0) result += 'Buzz';
+
+//     console.log(result ? result : i);
+// }
+
+
+    </script>
+</section> -->
+<!-- <section>
+    <script> /*Ternaires encore plus poussé* ? correspond à si  : correspond à sinon */
+    
+    for (let i = 1; i <= 199; i++) {
+        console.log(i % 3 === 0 ? 'Fizz' + (i % 5 === 0 ? 'Buzz' : '') : i % 5 === 0 ? 'Buzz' : i);
+}
+    </script>
+</section> -->
+<!-- <section>
+    <script>
+
+        /*Fonction pour la division*/
+
+        function diviserParDeux (nombre){ /*j'appelle le nom de ma fontion et lui dit qu'il faudra l'utiliser avec un nombre (à la fin il faut ouvrir les accolades et ecrir l'instruction de la fonction*/
+            return nombre / 2 /*j'explique ce que ma fonction doit faire : résultat avec ce que doit faire ma fonction cad qu'il doit diviser le nombre par 2*/
+        }
+        console.log (diviserParDeux(50)) /*je demande à ce que le résultat soit sur la console.log avec comme nombre 50*/
+        console.log (diviserParDeux(4))
+        var n = Math.random(); /*variable pour avoir des chiffres aléatoires*/
+        console.log (n); /*pour que la console m'affiche le chiffre aléatoire*/
+        console.log (diviserParDeux(n)); /*je demande à ma console d'afficher le résultat en rappelemant ma fonction avec la variable précédemment créer*/
+
+
+        //Fonction pour une somme
+
+        function somme(nombre,nombre){
+            return nombre + nombre;
+        }
+        console.log (somme(1,1))
+        var n = Math.random();
+        console.log (n);
+        console.log (somme(n,n));
+
+
+
+        //Fonction pour avoir le signe
+
+        function signe(nombre){
+            if( nombre === 0 ){
+                return 'nul';
+            }else if ( nombre < 0 ){
+                return 'négatif';
+            }else{
+                return 'positif';
+            }
+        } 
+        console.log (signe(5));
+        console.log (signe(-3));
+        console.log (signe(0));
+        var n = Math.random();
+        console.log(n);
+        console.log (signe(n));
+
+
+        //Fonction factorielle
+
+        function factorielle (nombre){
+            let fact = 1;
+            for(let i = 1; i <= nombre; i++){
+                fact = i * fact; 
+            }
+            return fact;
+        }
+        console.log (factorielle(0));
+        console.log (factorielle(1));
+        console.log (factorielle(3));
+        console.log (factorielle(4));
+    
+
+    </script>
+</section> -->
+
+<section>
+    <script>
+        //Exercice jeu à implémenter
+        
+        //numéro aléatoire de l'ordinateur
+        let numeroSecret = Math.round(Math.random()*100);
+        console.log ("le numéro secret est : ", numeroSecret);
+
+        //choix du joueur
+        alert ("Bienvenue ! Trouve le numéro secret en 10 tentatives !")
+        for (let i = 0; i < 10; i++) {
+            let joueur = prompt ("Merci de choisir un chiffre entre 1 et 100");
+                if ( joueur == numeroSecret){
+                alert ("Bravo !");
+                }else if ( joueur < numeroSecret ){
+                alert ("Plus grand");
+                }else if (joueur > numeroSecret ){
+                alert("plus petit");
+                }
+        }
+        alert ("Perdu ! Tu as épuisé toutes tes tentatives !")
+       
+
+    </script>
+</section>
+
+</body>
+
+
+</html>
