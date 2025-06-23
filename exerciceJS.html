@@ -268,7 +268,7 @@
     </script>
 </section> -->
 
-<section>
+<!-- <section>
     <script>
         //Exercice jeu à implémenter
         
@@ -292,6 +292,176 @@
        
 
     </script>
+</section> -->
+
+<!-- <section>
+    <script>
+        // Excercice ChiFouMi Sabrina
+
+        // function comparer (choixOrdinateur, choixUtilisateur){
+        //     if ( choixOrdinateur === choixUtilisateur ){
+        //         return ("il y a égalité")
+        //     }else if ( choixOrdinateur === "pierre"){
+        //         if ( choixUtilisateur === "ciseaux" ){
+        //            return ("L'ordinateur a gagné"); 
+        //         }else if ( choixUtilisateur ==="feuille"){
+        //             return ("L'utilisateur a gagné");
+        //         }       
+        //     }else if ( choixOrdinateur === "ciseaux"){
+        //         if (choixUtilisateur === "pierre"){
+        //             return ( "L'utilisateur a gagné" );
+        //         }else if (choixUtilisateur === "feuille"){
+        //             return ( "L'ordinateur a gagné " )
+        //         }
+        //     }else if ( choixOrdinateur === "feuille"){
+        //         if ( choixUtilisateur = "pierre"){
+        //             return ( "L'ordinateur a gagné" )
+        //         }else if ( choixUtilisateur = "ciseaux" ){
+        //             return ( "L'utilisateur a gagné" )
+        //         }
+        //     }
+        // }
+
+        // let choixUtilisateur = prompt ( "Merci de choisir entre pierre feuille ou ciseaux" );
+
+       
+        // let choixOrdinateur = Math.random();
+        // if ( choixOrdinateur <= 0.33){
+        //     choixOrdinateur = pierre;
+        // }else if (choixOrdinateur <=0.67){
+        //     choixOrdinateur = feuille;
+        // }else{
+        //     choixOrdinateur = ciseaux;
+        // }
+        // console.log ("le choix de l'ordinateur est ", choixOrdinateur );
+
+        // comparer (choixUtilisateur, choixOrdinateur)
+
+
+        // Exercice 6 ChiFouMi 
+
+        //Logique de l'exercie - on créer une fonction qu'on rappelera lorsqu'on voudra l'tuliser pour les parties de jeux
+
+
+        function comparer (choix1, choix2) {
+            if (choix1 === choix2){
+                return "egalité";
+            }
+
+        switch (choix1) {
+            case "pierre":
+                return choix2 === "ciseaux" ? "ordi" : "joueur"; /*Dans le cas où le choix1 est pierre et que le choix2 est ciseaux alors le résulat c'est ordi sinon joueur (le ? est la condition) */
+            case "feuille":
+                return choix2 === "pierre" ? "ordi" : "joueur";
+             case "ciseaux":
+                return choix2=== "feuille" ? "ordi" : "joueur";
+            default :
+                throw new Error ("Choix ivalide.");
+            }
+        }
+
+        // exercice - début de la partie
+        function ChiFouMi (){ /*Créer la fonction qu'on rappelle tout à la fin*/
+            let scoreOrdi = 0; /*on appel les scrores à 0*/
+            let scoreJoueur = 0;
+        
+            for (let manche = 0; manche < 3; manche ++) {
+                // let choixOrdinateur = Math.random();
+                // if ( choixOrdinateur <= 0.33){
+                //     choixOrdinateur = "pierre";
+                // }else if (choixOrdinateur <=0.67){
+                //     choixOrdinateur = "feuille";
+                // }else{
+                //     choixOrdinateur = "ciseaux";
+                // }
+
+                let choixOrdinateur = Math.random() <=0.33 ? "pierre" : Math.random() <=0.64 ? "feuille" : "ciseaux"; /*en mode ternaire*/
+
+                console.log ("le choix de l'ordinateur est ", choixOrdinateur );
+
+                let choixUtilisateur = prompt ( "Merci de choisir entre pierre feuille ou ciseaux" );
+
+                let resultat = comparer (choixOrdinateur, choixUtilisateur); /*je rappelle ma fonction comparer de mon switch case*/
+
+                if (resultat === "ordi"){
+                    scoreOrdi ++;
+                    alert ("L'ordinateur a gagné la manche");
+                }else if (resultat === "joueur"){
+                    scoreJoueur ++;
+                    alert ("Le joueur a gagné la manche");
+                }
+            }
+            if (scoreOrdi > scoreJoueur){
+                console.log ("L'ordinateur a remporté la partie");
+            }else if (scoreOrdi < scoreJoueur){
+                console.log ("Le joueur a remporté la partie");
+            }else{
+                console.log ("Il y a égalité");
+            }
+        }
+
+ChiFouMi(); /*attention a bien rappeler la fonction en bas*/
+    </script>
+</section> -->
+
+<section>
+    <script>
+// // Exercice 7.1 - Calendrier
+
+// let jours = ["lun", "007", "mer", "jeu", "ven", "sam", "BUG"];
+// let j = jours.pop();
+// console.log(j);
+// console.log (jours);
+// jours.push ("dim");
+// console.log (jours); 
+// console.log (jours[1] = "mar")
+// console.log (jours);
+// console.log (jours.length);
+// console.log (jours[2]);
+// console.log (jours);
+
+// Exercice 7.2 - Epicerie
+
+// var fruits = ["mangue", "raisin", "figue", "kiwi"];
+// console.log ("Voici la liste des fruits disponible :", fruits);
+
+// var choixClient = prompt ("Quel fruit désirez-vous acheter : Mangue, Raison, Figue, Kiwi");
+// var index = fruits.indexOf(choixClient);
+
+//     if (fruits.indexOf(choixClient) !== -1) { /*comme on a créé la variable on peut noter à la place que index = si le choix du client n'est pas -1 cad non dispo alors noté ok*/
+//         fruits.splice (index,1); /*Là je demande à supprimer le fruit choisi*/
+//         console.log ("Ok"); 
+//     }else{
+//      console.log ("Désolée, le fruit n'est plus disponible");
+//     }
+
+//     console.log ("Voici la liste des fruits disponibles : ", fruits);
+
+
+// Exercice 7.3 - le jeu du pendu
+
+let lettresAttendues = ["s","u","p","e","r"];
+console.log (lettresAttendues);
+let lettresTrouvees = [];
+console.log ("Voici les lettres trouvées :", lettreTrouvees);
+let choixJoueur = prompt ("Veuillez trouver le mot en choisissant une lettre, vous avez le droit à 10 tentatives");
+let mauvaisesLettres = [];
+console.log ("Voici les mauvaises lettres choisies :", mauvaisesLettres);
+let index = lettresAttendues.indexOf(ChoixJoueur);
+
+    if (index !== -1){
+        lettresAttendues (index,1);
+        choixJoueur.push (lettreTrouvees);
+        alert ("Bravo, vous avez trouvé une lettre");
+    }else{
+        choixJoueur.push (mauvaisesLettres);
+        alert ("Désolé, vous avez perdu une tentative");
+    }
+        
+
+
+
+</script>
 </section>
 
 </body>
