@@ -443,24 +443,24 @@ ChiFouMi(); /*attention a bien rappeler la fonction en bas*/
 let lettresAttendues = ["s","u","p","e","r"];
 console.log (lettresAttendues);
 let lettresTrouvees = [];
-console.log ("Voici les lettres trouvées :", lettreTrouvees);
+console.log ("Voici les lettres trouvées :", lettresTrouvees);
 let choixJoueur = prompt ("Veuillez trouver le mot en choisissant une lettre, vous avez le droit à 10 tentatives");
 let mauvaisesLettres = [];
 console.log ("Voici les mauvaises lettres choisies :", mauvaisesLettres);
-let index = lettresAttendues.indexOf(ChoixJoueur);
+let index = lettresAttendues.indexOf(choixJoueur);
 
-    if (index !== -1){
+while (mauvaisesLettres.lenght > 10) {
+    if (index -1){
         lettresAttendues (index,1);
-        choixJoueur.push (lettreTrouvees);
+        choixJoueur.push (lettresTrouvees);
         alert ("Bravo, vous avez trouvé une lettre");
     }else{
         choixJoueur.push (mauvaisesLettres);
         alert ("Désolé, vous avez perdu une tentative");
     }
+}
+    
         
-
-
-
 </script>
 </section>
 
