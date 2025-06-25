@@ -504,35 +504,32 @@ if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvée
                 }
                 break;
             case "l" :
+                var list = "liste des contacts : \n"
                 for (nom in annuaire){
-                    alert (nom + " " + annuaire[nom]);
+                    list += nom + " : " + annuaire[nom] + "\n";
                 }
+                alert (list);
                 break;
             case "a" :
                 var nouveauChoix = prompt ("Donner le nom d'un ami à ajouter");
                 var num = prompt ("Donner le numéro de votre ami");
                 annuaire[nouveauChoix] = num;
-                alert ("Le numéro de téléphone de " + choix + " "  + annuaire[choix] + "a bien été ajouté dans l'annuaire");
-                var liste = "Répertoire :\n";
-                for (let name in annuaire){
-                    liste += name + " : " + annuaire[name] + "\n";
-                }
+                alert ("Le contact a été ajouté");
                 break;
-                alert(liste);
             case "s" :
-                var suppr = prompt ("Supprimer dans l'annuaire un contact parmis Patricia et David").toLowerCase();
-                delete annuaire[suppr];
-                alert (suppr + " a bien été supprimé du répertoire");
-                var liste = "Répertoire :\n";
-                for (let name in annuaire){
-                    liste += name + " : " + annuaire[name] + "\n";
+                var suppr = prompt ("Supprimer un contact dans l'annuaire").toLowerCase();
+                if (annuaire[suppr]){
+                    delete annuaire[suppr];
+                    alert ("Le contact a bien été supprimé du répertoire");
                 }
-                alert(liste);
+                else{
+                    alert ("Le contact n'existe pas")
+                }
                 break;
             case "q" :
                 alert ("Vous venez de quitter le programme");
         }
-    }      
+    }
 
     </script>
 </section>
