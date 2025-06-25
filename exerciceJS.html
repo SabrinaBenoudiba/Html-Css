@@ -404,121 +404,136 @@ ChiFouMi(); /*attention a bien rappeler la fonction en bas*/
     </script>
 </section> -->
 
-<section>
+<!-- <section>
     <script>
-// // Exercice 7.1 - Calendrier
+// Exercice 7.1 - Calendrier
 
-// let jours = ["lun", "007", "mer", "jeu", "ven", "sam", "BUG"];
-// let j = jours.pop();
-// console.log(j);
-// console.log (jours);
-// jours.push ("dim");
-// console.log (jours); 
-// console.log (jours[1] = "mar")
-// console.log (jours);
-// console.log (jours.length);
-// console.log (jours[2]);
-// console.log (jours);
+let jours = ["lun", "007", "mer", "jeu", "ven", "sam", "BUG"];
+let j = jours.pop();
+console.log(j);
+console.log (jours);
+jours.push ("dim");
+console.log (jours); 
+console.log (jours[1] = "mar")
+console.log (jours);
+console.log (jours.length);
+console.log (jours[2]);
+console.log (jours);
 
-// Exercice 7.2 - Epicerie
+Exercice 7.2 - Epicerie
 
-// var fruits = ["mangue", "raisin", "figue", "kiwi"];
-// console.log ("Voici la liste des fruits disponible :", fruits);
+var fruits = ["mangue", "raisin", "figue", "kiwi"];
+console.log ("Voici la liste des fruits disponible :", fruits);
 
-// var choixClient = prompt ("Quel fruit désirez-vous acheter : Mangue, Raison, Figue, Kiwi");
-// var index = fruits.indexOf(choixClient);
+var choixClient = prompt ("Quel fruit désirez-vous acheter : Mangue, Raison, Figue, Kiwi");
+var index = fruits.indexOf(choixClient);
 
-//     if (fruits.indexOf(choixClient) !== -1) { /*comme on a créé la variable on peut noter à la place que index = si le choix du client n'est pas -1 cad non dispo alors noté ok*/
-//         fruits.splice (index,1); /*Là je demande à supprimer le fruit choisi*/
-//         console.log ("Ok"); 
-//     }else{
-//      console.log ("Désolée, le fruit n'est plus disponible");
-//     }
+    if (fruits.indexOf(choixClient) !== -1) { /*comme on a créé la variable on peut noter à la place que index = si le choix du client n'est pas -1 cad non dispo alors noté ok*/
+        fruits.splice (index,1); /*Là je demande à supprimer le fruit choisi*/
+        console.log ("Ok"); 
+    }else{
+     console.log ("Désolée, le fruit n'est plus disponible");
+    }
 
-//     console.log ("Voici la liste des fruits disponibles : ", fruits);
+    console.log ("Voici la liste des fruits disponibles : ", fruits);
 
 
-// Exercice 7.3 - le jeu du pendu
+Exercice 7.3 - le jeu du pendu
 
-// let lettresAttendues = ["s","u","p","e","r"]; // On crée un tableau avec les lettres à deviner (le mot "super")
-// let lettresTrouvees = []; // Tableau vide pour stocker les lettres trouvées par le joueur
-// let mauvaisesLettres = []; // Tableau vide pour stocker les mauvaises lettres proposées
+let lettresAttendues = ["s","u","p","e","r"]; // On crée un tableau avec les lettres à deviner (le mot "super")
+let lettresTrouvees = []; // Tableau vide pour stocker les lettres trouvées par le joueur
+let mauvaisesLettres = []; // Tableau vide pour stocker les mauvaises lettres proposées
 
-// while (mauvaisesLettres.length < 10 && lettresAttendues.length > 0) { // Tant qu’il reste moins de 10 erreurs et qu’il reste des lettres à trouver le jeu doit continuer
-//     let choixJoueur = prompt ("Veuillez trouver le mot en choisissant une lettre, vous avez le droit à 10 erreurs"); // On demande au joueur de proposer une lettre
-//     let index = lettresAttendues.indexOf(choixJoueur); // On cherche si la lettre proposée est dans le tableau des lettres à trouver
-//     if (index !== -1){ // Si la lettre est trouvée (index différent de -1)
-//         lettresAttendues.splice (index,1); // On retire cette lettre du tableau des lettres à trouver
-//         lettresTrouvees.push (choixJoueur); // On ajoute la lettre trouvée dans le tableau des lettres trouvées
-//         console.log ("Voici les lettres trouvées :", lettresTrouvees); // On affiche les lettres trouvées dans la console
-//         alert ("Bravo, vous avez trouvé une lettre"); // On félicite le joueur
-//     }else{ // Sinon (la lettre n’est pas dans le mot)
-//         mauvaisesLettres.push (choixJoueur); // On ajoute la lettre dans le tableau des mauvaises lettres
-//         console.log ("Voici les mauvaises lettres choisies :", mauvaisesLettres); // On affiche les mauvaises lettres dans la console
-//         alert ("Désolé, vous avez perdu une tentative"); // On informe le joueur qu’il a perdu une tentative
-//     }
-// }
+while (mauvaisesLettres.length < 10 && lettresAttendues.length > 0) { // Tant qu’il reste moins de 10 erreurs et qu’il reste des lettres à trouver le jeu doit continuer
+    let choixJoueur = prompt ("Veuillez trouver le mot en choisissant une lettre, vous avez le droit à 10 erreurs"); // On demande au joueur de proposer une lettre
+    let index = lettresAttendues.indexOf(choixJoueur); // On cherche si la lettre proposée est dans le tableau des lettres à trouver
+    if (index !== -1){ // Si la lettre est trouvée (index différent de -1)
+        lettresAttendues.splice (index,1); // On retire cette lettre du tableau des lettres à trouver
+        lettresTrouvees.push (choixJoueur); // On ajoute la lettre trouvée dans le tableau des lettres trouvées
+        console.log ("Voici les lettres trouvées :", lettresTrouvees); // On affiche les lettres trouvées dans la console
+        alert ("Bravo, vous avez trouvé une lettre"); // On félicite le joueur
+    }else{ // Sinon (la lettre n’est pas dans le mot)
+        mauvaisesLettres.push (choixJoueur); // On ajoute la lettre dans le tableau des mauvaises lettres
+        console.log ("Voici les mauvaises lettres choisies :", mauvaisesLettres); // On affiche les mauvaises lettres dans la console
+        alert ("Désolé, vous avez perdu une tentative"); // On informe le joueur qu’il a perdu une tentative
+    }
+}
 
-// if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvées
-//     alert ("Bravo vous avez trouvé toutes les lettres !") // Message de victoire
-// }else { // Sinon (le joueur a fait 10 erreurs)
-//     alert ("Vous avez perdu ! ") // Message de défaite
-// }
+if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvées
+    alert ("Bravo vous avez trouvé toutes les lettres !") // Message de victoire
+}else { // Sinon (le joueur a fait 10 erreurs)
+    alert ("Vous avez perdu ! ") // Message de défaite
+}
         
 </script>
-</section>
+</section> -->
 <section>
     <script>
 
-        // // Exercie 8.1 - Annuaire téléphonique
+// // Exercie 8.1 - Annuaire téléphonique
 
-        // var annuaire = { //L'annuaire est l'objet contenant les prénoms comme clés et en aleur les numéros de téléphone
-        //     patricia: '06 06 06 06 06',
-        //     david : '07 07 07 07 07',
-        // };
-        // console.log (annuaire.patricia);
-        // let nom = prompt ("Merci de saisir un prénom entre patricia et david").toLowerCase();
-        // alert ("Le numéro de téléphone de " + nom + " est : "  + annuaire[nom]); // Affiche le numéro correspondant au prénom saisi par l'utilisateur
+// var annuaire = { //L'annuaire est l'objet contenant les prénoms comme clés et en aleur les numéros de téléphone
+//     patricia: '06 06 06 06 06',
+//     david : '07 07 07 07 07',
+// };
+// console.log (annuaire.patricia);
+// var nom = prompt ("Merci de saisir un prénom entre patricia et david").toLowerCase();
+// alert ("Le numéro de téléphone de " + nom + " est : "  + annuaire[nom]); // Affiche le numéro correspondant au prénom saisi par l'utilisateur
       
 
 
-        // Exercice 8.2 - Répertoire téléphonique
+// Exercice 8.2 - Répertoire téléphonique avec plus de fonctionnalité
         
-        var annuaire = {
-            patricia: '0606060606',
-            david : '0707070707',
-        };
-        var choix ='';
+    var annuaire = {
+        patricia: '0606060606',
+        david : '0707070707',
+    };
+    var choix ='';
       
 
-        while (choix !== "q"){
-            let choix = prompt ("Veuillez choisir parmis les fonctionnalités suivantes : \n r pour rechercher \n l pour afficher la liste \n a pour ajouter \n s pour supprimer \n q pour quitter");
+    while (choix !== "q"){
+        var choix = prompt ("Veuillez choisir parmis les fonctionnalités suivantes : \n r pour rechercher \n l pour afficher la liste \n a pour ajouter \n s pour supprimer \n q pour quitter").toLowerCase();
             
-            switch (choix){
-                case "r" :
-                    let choix = prompt ("Recherche le numéro de téléphone parmis contact patricia et david");
-                    if (annuaire[choix]){
-                        alert ("Le numéro de téléphone de " + choix + " est : "  + annuaire[choix]);
-                    }else{
-                        alert ("Le nom n'est pas dans le répertoire");
-                    }
-                case "l" :
-                    for (nom in annuaire){
-                        alert (nom + " " + annuaire[nom]);
-                    }
-                case "a" :
-
-            }
-            
-
-
-
+        switch (choix){
+            case "r" :
+                choix = prompt ("Recherche le numéro de téléphone parmis contact Patricia et David").toLowerCase();
+                if (annuaire[choix]){
+                    alert ("Le numéro de téléphone de " + choix + " est : "  + annuaire[choix]);
+                }else{
+                    alert ("Le nom n'est pas dans le répertoire");
+                }
+                break;
+            case "l" :
+                for (nom in annuaire){
+                    alert (nom + " " + annuaire[nom]);
+                }
+                break;
+            case "a" :
+                var nouveauChoix = prompt ("Donner le nom d'un ami à ajouter");
+                var num = prompt ("Donner le numéro de votre ami");
+                annuaire[nouveauChoix] = num;
+                alert ("Le numéro de téléphone de " + choix + " "  + annuaire[choix] + "a bien été ajouté dans l'annuaire");
+                var liste = "Répertoire :\n";
+                for (let name in annuaire){
+                    liste += name + " : " + annuaire[name] + "\n";
+                }
+                break;
+                alert(liste);
+            case "s" :
+                var suppr = prompt ("Supprimer dans l'annuaire un contact parmis Patricia et David").toLowerCase();
+                delete annuaire[suppr];
+                alert (suppr + " a bien été supprimé du répertoire");
+                var liste = "Répertoire :\n";
+                for (let name in annuaire){
+                    liste += name + " : " + annuaire[name] + "\n";
+                }
+                alert(liste);
+                break;
+            case "q" :
+                alert ("Vous venez de quitter le programme");
         }
+    }      
 
-
-        
-
-        
     </script>
 </section>
 
