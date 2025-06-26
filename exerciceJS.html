@@ -467,18 +467,19 @@ if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvée
         
 </script>
 </section> -->
-<section>
+<!-- <section>
+
     <script>
 
 // // Exercie 8.1 - Annuaire téléphonique
 
-// var annuaire = { //L'annuaire est l'objet contenant les prénoms comme clés et en aleur les numéros de téléphone
-//     patricia: '06 06 06 06 06',
-//     david : '07 07 07 07 07',
-// };
-// console.log (annuaire.patricia);
-// var nom = prompt ("Merci de saisir un prénom entre patricia et david").toLowerCase();
-// alert ("Le numéro de téléphone de " + nom + " est : "  + annuaire[nom]); // Affiche le numéro correspondant au prénom saisi par l'utilisateur
+var annuaire = { //L'annuaire est l'objet contenant les prénoms comme clés et en aleur les numéros de téléphone
+    patricia: '06 06 06 06 06',
+    david : '07 07 07 07 07',
+};
+console.log (annuaire.patricia);
+var nom = prompt ("Merci de saisir un prénom entre patricia et david").toLowerCase();
+alert ("Le numéro de téléphone de " + nom + " est : "  + annuaire[nom]); // Affiche le numéro correspondant au prénom saisi par l'utilisateur
       
 
 
@@ -532,6 +533,26 @@ if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvée
                 alert ("Cette commande de lettre n'existe pas.")
         }
     }
+
+    </script>
+</section> -->
+<section>
+    <script>
+        // Exercie POO instanciation
+
+        class Etudiant { // Il est d'usage que le nom des class commence par une majuscule
+            constructor(age, poids, sexe) {
+                this.age = age; // On stocke l'âge dans l'objet instancié
+                this.poids = poids;
+                this.sexe = sexe;
+                alert ("Etudiant instancié");
+            }
+        }
+        var etudiant1 = new Etudiant (15, 80, "féminim");
+        var etudiant2 = new Etudiant (17);
+        alert ("L'étudiant1 a " + etudiant1.age + " ans, pèse " + etudiant1.poids + " kg et est de sexe " + etudiant1.sexe);
+
+    
 
     </script>
 </section>
