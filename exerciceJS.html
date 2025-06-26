@@ -504,11 +504,11 @@ if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvée
                 }
                 break;
             case "l" :
-                var list = "liste des contacts : \n"
-                for (nom in annuaire){
-                    list += nom + " : " + annuaire[nom] + "\n";
+                var list = "liste des contacts : \n"; // Variable créer pour contenir la liste des contacts
+                for (nom in annuaire) { // Créaction de la boucle for in afin de parcourir toutes les clés (ici le nom des contact) dans l'objet qui est l'annuaire
+                list += nom + " : " + annuaire[nom] + "\n"; // Pour ajouter le nom et son numéro à la liste (concaténation de 2 chaînes pour les mettre de bout en bout)
                 }
-                alert (list);
+                alert(list); 
                 break;
             case "a" :
                 var nouveauChoix = prompt ("Donner le nom d'un ami à ajouter");
@@ -527,7 +527,9 @@ if (lettresAttendues.length === 0) { // Si toutes les lettres ont été trouvée
                 }
                 break;
             case "q" :
-                alert ("Vous venez de quitter le programme");
+                alert ("Vous venez de quitter le programme, aurevoir.");
+            default :
+                alert ("Cette commande de lettre n'existe pas.")
         }
     }
 
